@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.annotations.SerializedName;
 import com.xiaoerge.littleastroapi.model.HoroscopeSign;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
@@ -32,7 +33,7 @@ public class HoroscopeReadings {
 
         HttpURLConnection con = (HttpURLConnection)
                 new URL(horoscopeRest).openConnection();
-        con.setRequestProperty("User-Agent", "LittleAstro-API");
+        con.setRequestProperty("User-Agent", "LittleAstro-API-Java");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 

@@ -7,44 +7,72 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ZodiacSign {
 
-    @SerializedName("Daily_Zodiac")
-    private String daily_Zodiac;
+    @SerializedName("Sign")
+    private String sign;
     @SerializedName("Icon")
     private String icon;
     @SerializedName("Info")
     private String info;
-    @SerializedName("Sign")
-    private String sign;
 
-    protected String getDaily_Zodiac() {
-        return this.daily_Zodiac;
+    @SerializedName("Daily_Zodiac")
+    private String daily_Zodiac;
+
+    public String getSign() {
+        return sign;
     }
 
-    protected void setDaily_Zodiac(String daily_Zodiac) {
-        this.daily_Zodiac = daily_Zodiac;
+    public void setSign(String sign) {
+        this.sign = sign;
     }
 
-    protected String getIcon() {
-        return this.icon;
+    public String getIcon() {
+        return icon;
     }
 
-    protected void setIcon(String icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    protected String getInfo() {
-        return this.info;
+    public String getInfo() {
+        return info;
     }
 
-    protected void setInfo(String info) {
+    public void setInfo(String info) {
         this.info = info;
     }
 
-    protected String getSign() {
-        return this.sign;
+    public String getDaily_Zodiac() {
+        return daily_Zodiac;
     }
 
-    protected void setSign(String sign) {
-        this.sign = sign;
+    public void setDaily_Zodiac(String daily_Zodiac) {
+        this.daily_Zodiac = daily_Zodiac;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ZodiacSign that = (ZodiacSign) o;
+
+        if (!sign.equals(that.getSign())) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return sign.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "ZodiacSign{" +
+                "sign='" + sign + '\'' +
+                ", icon='" + icon + '\'' +
+                ", info='" + info + '\'' +
+                ", daily_Zodiac='" + daily_Zodiac + '\'' +
+                '}';
     }
 }
