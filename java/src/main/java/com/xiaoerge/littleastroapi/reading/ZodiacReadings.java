@@ -9,6 +9,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.xiaoerge.littleastroapi.misc.AstroEnum;
+import com.xiaoerge.littleastroapi.misc.InvalidEnumException;
 import com.xiaoerge.littleastroapi.model.HoroscopeSign;
 import com.xiaoerge.littleastroapi.model.ZodiacSign;
 import org.apache.commons.configuration.ConfigurationException;
@@ -57,8 +59,13 @@ public class ZodiacReadings
         }
     }
 
-    public List<ZodiacSign> getSigns() {
-        return signs;
+    public ZodiacSign getSign(AstroEnum c) throws InvalidEnumException {
+        if (c.ordinal() < 12) {
+            throw new InvalidEnumException(c.toString() + " is not a valid sign for");
+        }
+        else {
+            return signs.get(c.ordinal()-12);
+        }
     }
 
     public static ZodiacReadings getInstance()

@@ -1,5 +1,7 @@
 package com.xiaoerge.littleastroapi;
 
+import com.xiaoerge.littleastroapi.misc.AstroEnum;
+import com.xiaoerge.littleastroapi.misc.InvalidEnumException;
 import com.xiaoerge.littleastroapi.model.HoroscopeSign;
 import com.xiaoerge.littleastroapi.model.ZodiacSign;
 import com.xiaoerge.littleastroapi.reading.HoroscopeReadings;
@@ -11,15 +13,15 @@ import java.io.IOException;
 /**
  * Created by xiaoerge on 1/4/15.
  */
-public class program
+public class Program
 {
-    public static void main(String[] args) throws ConfigurationException, IOException
+    public static void main(String[] args) throws ConfigurationException, IOException, InvalidEnumException
     {
         HoroscopeReadings horoscopeReadings = HoroscopeReadings.getInstance();
         ZodiacReadings zodiacReadings = ZodiacReadings.getInstance();
 
-        HoroscopeSign aries = horoscopeReadings.getSigns().get(0);
-        ZodiacSign rat = zodiacReadings.getSigns().get(0);
+        HoroscopeSign aries = horoscopeReadings.getSign(AstroEnum.Aries);
+        ZodiacSign rat = zodiacReadings.getSign(AstroEnum.Rat);
 
         System.out.println(aries);
         System.out.println(rat);
