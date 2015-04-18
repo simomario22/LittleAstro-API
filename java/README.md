@@ -1,27 +1,26 @@
-LittleAstro-API
-===============
+# LittleAstro-API
 
-Java Client
------------
+### Java Client
 
+### Quick Start
 
-Quick Start
------------
 ```java
 public static void main(String[] args) throws ConfigurationException, IOException, InvalidEnumException
-    {
-        HoroscopeReadings horoscopeReadings = HoroscopeReadings.getInstance();
-        ZodiacReadings zodiacReadings = ZodiacReadings.getInstance();
+{
+    HoroscopeReadings horoscopeReadings = HoroscopeReadings.getInstance();
+    ZodiacReadings zodiacReadings = ZodiacReadings.getInstance();
 
-        HoroscopeSign aries = horoscopeReadings.getSign(AstroEnum.Aries);
-        ZodiacSign rat = zodiacReadings.getSign(AstroEnum.Rat);
+    HoroscopeSign aries = horoscopeReadings.getSign(AstroEnum.Aries);
+    ZodiacSign rat = zodiacReadings.getSign(AstroEnum.Rat);
 
-        System.out.println(aries);
-        System.out.println(rat);
+    System.out.println(aries);
+    System.out.println(rat);
 
-        System.out.println(aries.getDaily_Horoscope());
-        System.out.println(aries.getLove());
-        System.out.println(aries.getWellness());
-        System.out.println(rat.getDaily_Zodiac());
-    }
+    System.out.println(aries.getDaily_Horoscope());
+    System.out.println(aries.getLove());
+    System.out.println(aries.getWellness());
+    System.out.println(rat.getDaily_Zodiac());
+}
 ```
+[Demo App](https://github.com/xiaoerge/LittleAstroGWT)
+
