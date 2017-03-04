@@ -8,6 +8,6 @@ Sample
 
 http://httpdb.littleastro.com/index.php/get?table=horoscope_readings&order_by=date,desc&limit=360
 
-
 Zodiac will only support daily
+
 http://httpdb.littleastro.com/index.php/get?table=zodiac_readings&order_by=date,desc&limit=360
