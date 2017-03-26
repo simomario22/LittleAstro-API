@@ -1,4 +1,0 @@
-{
-  "horoscope_endpoint": "http://www.api.littleastro.com/newreset/index.php/get?table=Horoscope_Reading",
-  "zodiac_endpoint": "http://www.api.littleastro.com/newreset/index.php/get?table=Zodiac_Reading"
-}
