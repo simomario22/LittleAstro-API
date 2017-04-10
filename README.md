@@ -9,3 +9,5 @@ http://www.api.littleastro.com/public/xiaoerge_dev_horoscope.php
 Zodiac (star repository and ask for a custom url)
 
 http://www.api.littleastro.com/public/xiaoerge_dev_zodiac.php
+
+## Dev urls are not stable or guarantee to work
