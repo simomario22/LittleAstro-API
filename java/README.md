@@ -4,7 +4,7 @@
 
 ### Quick Start
 
-### Need to update URL locations to reflect the new endpoint location
+### Need to update config urls to reflect the new endpoints
 
 ```java
 public static void main(String[] args) throws ConfigurationException, IOException, InvalidEnumException
